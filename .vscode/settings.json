@@ -1,3 +1,11 @@
 {
-  "cSpell.words": ["dotenv", "mulamwa", "sqlalchemy", "todoapp", "todos"]
+  "cSpell.words": [
+    "classname",
+    "dotenv",
+    "jsonify",
+    "mulamwa",
+    "sqlalchemy",
+    "todoapp",
+    "todos"
+  ]
 }
