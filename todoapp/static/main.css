@@ -1,6 +1,5 @@
 body {
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,4 +9,32 @@ body {
 
 .hidden {
   display: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  width: 400px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 20px;
+}
+
+ul li {
+  clear: both;
+}
+
+li button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  color: red;
+  float: right;
+  font-size: 20px;
+}
+
+.delete {
+  margin-left: 16px;
 }
