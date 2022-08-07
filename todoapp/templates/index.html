@@ -5,14 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Todo App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{{ url_for('static', filename='main.css') }}"
+    />
   </head>
   <body>
-    <ul>
+    <form id="form" method="post" action="/todos/create">
+      <input
+        id="description"
+        type="text"
+        name="description"
+        placeholder="Description"
+      />
+      <input type="submit" value="Create" />
+    </form>
+    <div id="error" class="hidden">Something wet wrong!</div>
+    <ul id="todos">
       {% for todo in data %}
       <li>{{ todo.description }}</li>
       {% endfor %}
     </ul>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
   </body>
 </html>
