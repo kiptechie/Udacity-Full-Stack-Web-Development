@@ -1,42 +1,23 @@
-body {
-  width: 100vw;
-  background-color: beige;
-  padding: 16px;
-}
-
-/* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-
 .hidden {
   display: none;
 }
-
 ul {
   list-style: none;
-  padding: 0;
-  margin: 12px;
+  padding-left: 0;
+  width: 200px;
 }
-
-ul li {
+li {
   clear: both;
 }
-
 li button {
-  cursor: pointer;
   -webkit-appearance: none;
   border: none;
   outline: none;
   color: red;
   float: right;
-  font-size: 20px;
+  cursor: pointer;
+  font-size: 16px;
 }
-
-.delete {
-  margin-left: 16px;
-}
-
 .lists-wrapper,
 .todos-wrapper {
   display: inline-block;
