@@ -1,7 +1,7 @@
 from distutils.log import error
 from ftplib import error_reply
 import sys
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 import os
@@ -54,6 +54,33 @@ def create_todo():
             return jsonify(body), 200
 
 
+@app.route('/todos/<todo_id>/set-completed', methods=['POST'])
+def set_completed_todo(todo_id):
+    try:
+        completed = request.get_json()['completed']
+        todo = Todo.query.get(todo_id)
+        todo.completed = completed
+        db.session.commit()
+    except:
+        db.session.rollback()
+    finally:
+        db.session.close()
+    return redirect(url_for('index'))
+
+
+@app.route('/todos/<todo_id>/delete', methods=['POST'])
+def delete_todo(todo_id):
+    try:
+        todo = Todo.query.filter_by(id=todo_id)
+        todo.delete()
+        db.session.commit()
+    except:
+        db.session.rollback()
+    finally:
+        db.session.close()
+    return jsonify({'delete success': True})
+
+
 @app.route('/')
 def index():
-    return render_template('index.html', data=Todo.query.all())
+    return render_template('index.html', data=Todo.query.order_by('id').all())
