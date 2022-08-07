@@ -97,7 +97,9 @@ def delete_todo(todo_id):
 def get_list_todos(list_id):
     return render_template(
         'index.html',
-        data=Todo.query
+        lists=TodoList.query.all(),
+        active_list=TodoList.query.get(list_id),
+        todos=Todo.query
         .filter_by(list_id=list_id)
         .order_by('id')
         .all()
