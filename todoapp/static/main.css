@@ -1,11 +1,13 @@
 body {
   width: 100vw;
-  display: flex;
+  background-color: beige;
+  padding: 16px;
+}
+
+/* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: beige;
-}
+  align-items: center; */
 
 .hidden {
   display: none;
@@ -14,11 +16,7 @@ body {
 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
-  display: grid;
-  width: 400px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-gap: 20px;
+  margin: 12px;
 }
 
 ul li {
@@ -37,4 +35,10 @@ li button {
 
 .delete {
   margin-left: 16px;
+}
+
+.lists-wrapper,
+.todos-wrapper {
+  display: inline-block;
+  vertical-align: top;
 }
