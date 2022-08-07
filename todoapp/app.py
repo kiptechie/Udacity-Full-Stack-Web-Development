@@ -1,7 +1,7 @@
 from distutils.log import error
 from ftplib import error_reply
 import sys
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 import os
