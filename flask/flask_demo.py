@@ -37,6 +37,7 @@ def addMulamwa():
     mulamwa = Person(name='Mulamwa')
     db.session.add(mulamwa)
     db.session.commit()
+    db.session.close()
 
 
 @app.route('/')
