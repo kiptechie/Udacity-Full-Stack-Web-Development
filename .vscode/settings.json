@@ -9,6 +9,7 @@
     "sqlalchemy",
     "todoapp",
     "todolist",
-    "todos"
+    "todos",
+    "urandom"
   ]
 }
