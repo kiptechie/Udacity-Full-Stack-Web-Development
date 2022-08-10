@@ -4,6 +4,7 @@
     "classname",
     "dateutil",
     "dotenv",
+    "ilike",
     "jsonify",
     "mulamwa",
     "sqlalchemy",
