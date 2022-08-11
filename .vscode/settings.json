@@ -6,11 +6,13 @@
     "dotenv",
     "ilike",
     "jsonify",
+    "levelname",
     "mulamwa",
     "sqlalchemy",
     "todoapp",
     "todolist",
     "todos",
-    "urandom"
+    "urandom",
+    "wtforms"
   ]
 }
